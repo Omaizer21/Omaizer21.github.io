@@ -628,7 +628,7 @@
     navigator.clipboard.writeText(text).then(function () {
       showToast('📋 Folder structure copied to clipboard!');
     }).catch(function () {
-      // Fallback
+      // Fallback for browsers without Clipboard API support
       var ta = document.createElement('textarea');
       ta.value = text;
       ta.style.position = 'fixed';
