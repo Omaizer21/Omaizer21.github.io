@@ -918,7 +918,7 @@
     var line = '';
     var isFolder = node.type === 'folder';
     if (prefix !== null) { line = prefix + (isLast ? '└── ' : '├── '); }
-    line += (isFolder ? '' : '') + node.name + (isFolder ? '/' : '') + '\n';
+    line += node.name + (isFolder ? '/' : '') + '\n';
     if (isFolder && node.children && node.children.length > 0) {
       var childPrefix = prefix === null ? '' : prefix + (isLast ? '    ' : '│   ');
       node.children.forEach(function (child, i) {
