@@ -602,7 +602,7 @@ export const routes: Routes = [
             <div class="perf-card__icon">&#x1F4CA;</div>
             <h3 class="perf-card__title">track in @for</h3>
             <p class="perf-card__desc">The new <code>@for</code> control flow requires a <code>track</code> expression. Angular uses it to minimize DOM operations. Always track by a unique identifier.</p>
-@for (user of users(); track user.id) {
+            <pre class="code-block">@for (user of users(); track user.id) {
   &lt;app-user-card [user]=&quot;user&quot; /&gt;
 }
 
@@ -610,7 +610,7 @@ export const routes: Routes = [
   &lt;span class=&quot;tag&quot;&gt;{{ tag }}&lt;/span&gt;
 }
 
-@for (item of items(); track item.id; let i = ) {
+@for (item of items(); track item.id; let i = $index) {
   &lt;li&gt;{{ i + 1 }}. {{ item.name }}&lt;/li&gt;
 }</pre>
           </div>

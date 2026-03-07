@@ -164,7 +164,7 @@ ul { list-style: none; }
   transform: translateY(20px);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 999;
+  z-index: var(--z-back-to-top);
   box-shadow: var(--shadow-md);
 }
 
